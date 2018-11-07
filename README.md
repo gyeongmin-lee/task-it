@@ -1,1 +1,1 @@
-# bcit-comp1930-task-list-project
+# This is a task list project for BCIT COMP1930 course.
