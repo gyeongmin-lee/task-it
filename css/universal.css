@@ -6,6 +6,8 @@
     --sub2-bg-color: #404040;
     --main-text-color: #FFFFFF;
     --sub-text-color: #C6C6C6;
+    --notdone-color: #FF3B30;
+    --done-color: #28CD3C;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -51,7 +53,7 @@ p {
 p.content {
     color: var(--sub-text-color);
     font-weight: 300;
-    font-size: 12pt;
+    font-size: 11pt;
 }
 
 .box-bottom {
@@ -60,11 +62,19 @@ p.content {
     padding: 5px;
 }
 
+.dropdown-icon {
+    background-image: url("../image/down-arrow.png");
+}
+
 
 
 /** TASK LIST **/
+.title--task {
+    font-size: 16pt;
+}
+
 .box-container--task {
-    min-height: 0px;
+    min-height: 110px;
 }
 
 .box-bottom > .content--number-of-people {
@@ -86,4 +96,28 @@ p.content {
 
 .content--task {
     margin: 10px 10px 10px 11px;
+}
+
+.dropdown-icon--task {
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    display: inline-block;
+    background-size: cover;
+}
+
+#in-progress-people {
+    color: var(--notdone-color);
+}
+
+#done-people {
+    color: var(--done-color);
+}
+
+.checkbox-not-done {
+    color: var(--notdone-color);
+}
+
+.checkbox-done {
+    color: var(--done-color);
 }
