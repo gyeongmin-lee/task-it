@@ -6,6 +6,8 @@
     --sub2-bg-color: #404040;
     --main-text-color: #FFFFFF;
     --sub-text-color: #C6C6C6;
+    --notdone-color: #FF3B30;
+    --done-color: #28CD3C;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -26,6 +28,12 @@ p {
     height: 50px;
     background-color: var(--sub1-bg-color);
     box-shadow: 0px 2px 4px #000000;
+    position: fixed;
+    top: 0;
+}
+
+.container {
+    margin-top: calc(50px + 2.5%);
 }
 
 .box-container {
@@ -51,7 +59,7 @@ p {
 p.content {
     color: var(--sub-text-color);
     font-weight: 300;
-    font-size: 12pt;
+    font-size: 11pt;
 }
 
 .box-bottom {
@@ -64,8 +72,16 @@ p.content {
     background-color: var(--sub1-bg-color);
     overflow: hidden;
     padding: 5px;
-	font-size: 20pt;
 }
+
+.dropdown-icon {
+    background-image: url("../image/down-arrow.png");
+}
+
+.container {
+    text-align: left;
+}
+
 
 .setting-button {
 	display: inline-block;
@@ -83,9 +99,14 @@ p.content {
 	padding: 2.5px;
 }
 
+
 /** TASK LIST **/
+.title--task {
+    font-size: 16pt;
+}
+
 .box-container--task {
-    min-height: 0px;
+    min-height: 110px;
 }
 
 .box-bottom > .content--number-of-people {
@@ -107,6 +128,52 @@ p.content {
 
 .content--task {
     margin: 10px 10px 10px 11px;
+}
+
+.dropdown-icon--task {
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    display: inline-block;
+    background-size: cover;
+}
+
+#in-progress-people {
+    color: var(--notdone-color);
+}
+
+#done-people {
+    color: var(--done-color);
+}
+
+.checkbox-not-done {
+    color: var(--notdone-color);
+}
+
+.checkbox-done {
+    color: var(--done-color);
+}
+
+.task-left-side {
+    width: calc(100% - 70px);
+}
+
+.checkbox {
+    position: relative;
+    float: right;
+    top: 16.5px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+}
+
+.checkbox-not-checked {
+    background-image: url("../image/notdone-checkbox-icon.png");   
+}
+
+.checkbox-checked {
+    background-image: url("../image/done-checkbox-icon.png");   
 }
 
 
@@ -179,6 +246,3 @@ p.content {
 	margin-right: 10px;
 }
 
-
-
-	
