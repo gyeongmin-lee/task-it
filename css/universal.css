@@ -68,6 +68,13 @@ p.content {
     padding: 5px;
 }
 
+
+.box-top {
+    background-color: var(--sub1-bg-color);
+    overflow: hidden;
+    padding: 5px;
+}
+
 .dropdown-icon {
     background-image: url("../image/down-arrow.png");
 }
@@ -75,6 +82,7 @@ p.content {
 .container {
     text-align: left;
 }
+
 
 /** TASK LIST **/
 .title--task {
