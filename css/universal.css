@@ -26,6 +26,7 @@ body {
     width: 95%;
     background-color: var(--sub2-bg-color);
     box-shadow: 2px 0px 2px #000000;
+	margin: 0 auto;
 }
 
 .title {
