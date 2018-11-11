@@ -28,6 +28,12 @@ p {
     height: 50px;
     background-color: var(--sub1-bg-color);
     box-shadow: 0px 2px 4px #000000;
+    position: fixed;
+    top: 0;
+}
+
+.container {
+    margin-top: calc(50px + 2.5%);
 }
 
 .box-container {
@@ -66,7 +72,9 @@ p.content {
     background-image: url("../image/down-arrow.png");
 }
 
-
+.container {
+    text-align: left;
+}
 
 /** TASK LIST **/
 .title--task {
@@ -120,4 +128,26 @@ p.content {
 
 .checkbox-done {
     color: var(--done-color);
+}
+
+.task-left-side {
+    width: calc(100% - 70px);
+}
+
+.checkbox {
+    position: relative;
+    float: right;
+    top: 16.5px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+}
+
+.checkbox-not-checked {
+    background-image: url("../image/notdone-checkbox-icon.png");   
+}
+
+.checkbox-checked {
+    background-image: url("../image/done-checkbox-icon.png");   
 }
