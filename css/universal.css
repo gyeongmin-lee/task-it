@@ -60,7 +60,28 @@ p.content {
     padding: 5px;
 }
 
+.box-top {
+    background-color: var(--sub1-bg-color);
+    overflow: hidden;
+    padding: 5px;
+	font-size: 20pt;
+}
 
+.setting-button {
+	display: inline-block;
+}
+
+.close-button {
+	float: right;
+	padding-top:5px;
+	padding-right: 8px;
+}
+
+.close-button-img {
+	border: 1.5px solid #FFFFFF;
+	border-radius: 5px;
+	padding: 2.5px;
+}
 
 /** TASK LIST **/
 .box-container--task {
@@ -87,3 +108,77 @@ p.content {
 .content--task {
     margin: 10px 10px 10px 11px;
 }
+
+
+
+
+/** Preference **/
+.box-container--preference {
+	padding: 10px;
+	height: 30px;
+}
+
+.theme-option--preference {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.content--preference{
+	font-size: 15pt;
+	font-weight: 250;
+}
+
+.checkbox--preference {
+	width: 10px;
+	height: 10px;
+	background-color: #FFFFFF;
+	border: 1px solid #00000;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.edit-icon--preference {
+	padding-top: 5px;
+	float: right;
+	vertical-align: middle;
+}
+
+.group-box-content--preference {
+	height: 150px;
+	overflow: scroll;
+}
+
+.group--preference {
+	border-bottom: 2px solid var(--sub1-bg-color);
+	width: 98%;
+	margin: 0 auto;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.group-option--preference {
+	float: right;
+	padding-top: 4px;
+}
+.exit_gorup--preference {
+	text-decoration: underline;
+}
+
+.info--preference {
+	float: right;
+	padding-right: 2px;
+	padding-left: 2px;
+}
+
+.preference--button {
+	width: 90px;
+	height: 35px;
+	float: right;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 10px;
+}
+
+
+
+	
