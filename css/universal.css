@@ -179,6 +179,31 @@ p.content {
 
 
 
+/** Landing Page **/
+.title--landing-page{
+	font-size: 40pt;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.body--landing-page {
+	margin: 20px;
+	font-size: 13pt;
+}
+
+.checkbox--landing-page {
+	float: left;
+	clear: left;
+	position: unset;
+	margin: 10px;
+}
+
+.nfinished--landing-page {
+	float: left;
+	height: 100px;
+	
+}
+
 /** Preference **/
 .box-container--preference {
 	padding: 10px;
