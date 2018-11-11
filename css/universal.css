@@ -10,8 +10,6 @@
     --done-color: #28CD3C;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
 body {
     background-color: var(--main-bg-color);
     font-family: Roboto;
@@ -34,6 +32,7 @@ p {
 
 .container {
     margin-top: calc(50px + 2.5%);
+    text-align: left;
 }
 
 .box-container {
@@ -77,11 +76,6 @@ p.content {
 .dropdown-icon {
     background-image: url("../image/down-arrow.png");
 }
-
-.container {
-    text-align: left;
-}
-
 
 .setting-button {
 	display: inline-block;
@@ -252,7 +246,7 @@ p.content {
 	float: right;
 	padding-top: 4px;
 }
-.exit_gorup--preference {
+.exit-group--preference {
 	text-decoration: underline;
 }
 
