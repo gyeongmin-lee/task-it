@@ -267,12 +267,14 @@ p.content {
     font-size: 16pt;
     margin: 5px;
     color: var(--done-color);
+    float: left;
 }
 
 .title--list-not-done {
     font-size: 16pt;
     margin: 5px;
     color: var(--notdone-color);
+    float: left;
 }
 
 .people-list  {
@@ -290,6 +292,11 @@ p.content {
     padding: 7px 0;
     font-weight: 300;
     border-bottom: 1px solid var(--sub1-bg-color);
+}
+
+.close-button-img--people {
+    margin-top: 8px;
+    margin-right: 5px;
 }
 
 
