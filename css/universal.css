@@ -143,6 +143,11 @@ p.content {
     color: var(--sub-text-color);
 }
 
+.icon--menu-pane {
+    width: 15px;
+    height: 15px;
+    padding: 0 10px;
+}
 
 /** TASK LIST **/
 .title--task {
