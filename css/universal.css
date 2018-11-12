@@ -405,7 +405,6 @@ p.content {
 	margin-right: 10px;
 }
 
-<<<<<<< HEAD
 
 /** group Info **/
 
@@ -439,7 +438,6 @@ p.content {
     overflow: hidden;
     text-align: center;
     font-size: 15pt;
-=======
 /* Tablets */
 @media only screen and (min-width: 600px) {
 
@@ -448,5 +446,4 @@ p.content {
 /* Desktop */
 @media only screen and (min-width: 1200px) {
 
->>>>>>> d39599a7293d9ba954b2982680107163cc204e2c
 }
