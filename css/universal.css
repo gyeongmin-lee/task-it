@@ -177,6 +177,7 @@ p.content {
 /** TASK LIST **/
 .title--task {
     font-size: 16pt;
+    margin: 10px;
 }
 
 .box-bottom > .content--number-of-people {
@@ -190,10 +191,6 @@ p.content {
 .box-bottom > .content--due-date {
     float: right;
     padding: 5px;
-}
-
-.title--task {
-    margin: 10px;
 }
 
 .content--task {
@@ -266,7 +263,34 @@ p.content {
     margin-left: 8px;
 }
 
+.title--list-done {
+    font-size: 16pt;
+    margin: 5px;
+    color: var(--done-color);
+}
 
+.title--list-not-done {
+    font-size: 16pt;
+    margin: 5px;
+    color: var(--notdone-color);
+}
+
+.people-list  {
+    padding: 0;
+    margin: 10px;
+    list-style: none;
+    color: var(--sub-text-color);
+    column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+}
+
+.people-list > li {
+    font-size: 11pt;
+    padding: 7px 0;
+    font-weight: 300;
+    border-bottom: 1px solid var(--sub1-bg-color);
+}
 
 
 /** Landing Page **/
