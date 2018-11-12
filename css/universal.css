@@ -122,6 +122,27 @@ p.content {
     background-color: var(--main-bg-color);
 }
 
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list-deeper {
+    border-top: 3px solid var(--main-bg-color);
+    padding-left: 1em;
+}
+
+.menu-list > li {
+    font-size: 14pt;
+    font-weight: 300;
+    padding: 13px 0 13px 10px;
+}
+
+.menu-list-deeper > li {
+    color: var(--sub-text-color);
+}
+
 
 /** TASK LIST **/
 .title--task {
