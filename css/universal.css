@@ -225,7 +225,7 @@ p.content {
 }
 
 .task-left-side {
-    width: calc(100% - 70px);
+    width: calc(100% - 45px);
 }
 
 .checkbox {
