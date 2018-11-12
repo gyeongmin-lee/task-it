@@ -323,8 +323,18 @@ p.content {
 .task-filter-sort-bar {
     background: inherit;
     box-shadow: none;
-    height: 50px;
     overflow: hidden;
+}
+
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown-content li {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
 .filter--task {
@@ -334,6 +344,11 @@ p.content {
 .sort--task {
     float: right;
 }
+
+.label, .dropdown {
+    display: inline-block;
+}
+
 
 button.dropdown {
     background-color: var(--sub2-bg-color);
