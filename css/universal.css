@@ -54,6 +54,14 @@ a, a:link, a:visited, a:hover, a:active {
     margin: 0;
     font-size: 18pt;
     font-weight: 300;
+    color: var(--main-text-color);
+}
+
+.label {
+    margin: 0;
+    font-size: 14pt;
+    font-weight: 300;
+    color: var(--main-text-color);
 }
 
 .title--nav {
@@ -310,6 +318,31 @@ p.content {
 .close-button-img--people {
     margin-top: 8px;
     margin-right: 5px;
+}
+
+.task-filter-sort-bar {
+    background: inherit;
+    box-shadow: none;
+    height: 50px;
+    overflow: hidden;
+}
+
+.filter--task {
+    float: left;
+}
+
+.sort--task {
+    float: right;
+}
+
+button.dropdown {
+    background-color: var(--sub2-bg-color);
+    border: none;
+    border-radius: 8px;
+    color: var(--main-text-color);
+    padding: 5px;
+    font-weight: 300;
+    font-size: 12pt;
 }
 
 
