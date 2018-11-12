@@ -59,7 +59,7 @@ a, a:link, a:visited, a:hover, a:active {
 
 .label {
     margin: 0;
-    font-size: 14pt;
+    font-size: 12pt;
     font-weight: 300;
     color: var(--main-text-color);
 }
@@ -355,7 +355,7 @@ button.dropdown {
     border: none;
     border-radius: 8px;
     color: var(--main-text-color);
-    padding: 5px;
+    padding: 4px 6px;
     font-weight: 300;
     font-size: 12pt;
 }
