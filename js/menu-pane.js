@@ -1,14 +1,35 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var menuPanel = $(".menu-panel");
     var menuButton = $(".button--menu");
     var exitButton = $(".close-button-img--menu");
-    var animationSpeed = 400;
+    var animationSpeed = 100;
+    var swipeOffset = 50;
+    var start = null;
 
-    menuButton.click(function() {
-        menuPanel.animate({width: 'toggle'}, 200);
+    menuButton.click(toggleMenu);
+
+    exitButton.click(toggleMenu);
+
+    menuPanel.on('touchstart', function (e) {
+        if (e.touches.length === 1) {
+            start = event.touches.item(0).clientX;
+        } else {
+            start = null;
+        }
     });
 
-    exitButton.click(function() {
-        menuPanel.animate({width: 'toggle'}, 200);
+    menuPanel.on('touchend', function (e) {
+        if (start) {
+            var end = e.changedTouches.item(0).clientX;
+            
+            console.log(start + " " + end);
+            if ((start - end) > swipeOffset) {
+                toggleMenu();
+            }
+        }
     });
+
+    function toggleMenu(event) {
+        menuPanel.animate({ width: 'toggle' }, animationSpeed);
+    }
 });
