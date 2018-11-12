@@ -232,6 +232,26 @@ p.content {
     background-image: url("../image/done-checkbox-icon.png");   
 }
 
+.button--add-task {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    width: 48px;
+    height: 48px;
+
+    background-color: var(--sub2-bg-color);
+    border-radius: 12px;
+}
+
+.icon--add-task {
+    width: 32px;
+    height: 32px;
+
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
 
 
 
