@@ -405,3 +405,12 @@ p.content {
 	margin-right: 10px;
 }
 
+/* Tablets */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+
+}
