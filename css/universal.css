@@ -21,6 +21,11 @@ p {
     margin: 0;
 }
 
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: inherit;
+    color: inherit;
+}
+
 .nav {
     width: 100%;
     height: 50px;
@@ -46,7 +51,7 @@ p {
 
 .title {
     margin: 0;
-    font-size: 22pt;
+    font-size: 18pt;
     font-weight: 300;
 }
 
@@ -152,6 +157,13 @@ p.content {
     padding: 13px 0 13px 10px;
 }
 
+.menu-list > li > a {
+    margin: 0px; 
+    display: block;
+    width: 100%; 
+    height: 100%;
+}
+
 .menu-list-deeper > li {
     color: var(--sub-text-color);
 }
@@ -165,10 +177,6 @@ p.content {
 /** TASK LIST **/
 .title--task {
     font-size: 16pt;
-}
-
-.box-container--task {
-    min-height: 110px;
 }
 
 .box-bottom > .content--number-of-people {
@@ -223,10 +231,10 @@ p.content {
 .checkbox {
     position: relative;
     float: right;
-    top: 16.5px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
+    top: 7px;
+    right: 7px;
+    width: 32px;
+    height: 32px;
     background-size: cover;
 }
 
