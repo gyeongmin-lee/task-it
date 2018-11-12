@@ -21,8 +21,6 @@ $(document).ready(function () {
     menuPanel.on('touchend', function (e) {
         if (start) {
             var end = e.changedTouches.item(0).clientX;
-            
-            console.log(start + " " + end);
             if ((start - end) > swipeOffset) {
                 toggleMenu();
             }
