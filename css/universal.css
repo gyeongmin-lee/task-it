@@ -81,16 +81,45 @@ p.content {
 	display: inline-block;
 }
 
-.close-button {
-	float: right;
-	padding-top:5px;
-	padding-right: 8px;
+.close-button-img {
+    float: right;
+    position: inherit;
+    top: 16px;
+    right: 10px;
 }
 
-.close-button-img {
-	border: 1.5px solid #FFFFFF;
-	border-radius: 5px;
-	padding: 2.5px;
+.setting-button-img-nav {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 9px;
+    right: 9px;
+}
+
+.button--menu {
+    position: absolute;
+    font-size: 14pt;
+    font-weight: 300;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    top: 9px;
+    left: 9px;
+}
+
+.menu-panel {
+    background-color: var(--sub1-bg-color);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80%;
+    height: 100%;
+}
+
+.title-menu {
+    line-height: 50px;
+    text-align: center;
+    background-color: var(--main-bg-color);
 }
 
 
