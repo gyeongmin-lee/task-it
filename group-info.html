@@ -1,77 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>TASK APP</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="./css/universal.css">
-  </head>
-  <body>
-  		<div class="nav nav--task-top">
-  			<div class="button button--menu">MENU</div>
-			<h1 class="title title--nav">BCIT SET B</h1>
+
+<head>
+	<title>TASK APP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="./css/universal.css">
+</head>
+
+<body>
+	<div class="nav nav--task-top">
+		<div class="button button--menu">MENU</div>
+		<h1 class="title title--nav">BCIT SET B</h1>
+	</div>
+	<div class="menu-panel">
+		<h1 class="title title-menu">MENU</h1>
+		<img src="./image/close-button.png" alt="close button" width="21" height="21" class="close-button-img close-button-img--menu" />
+		<ul class="menu-list">
+			<li><img src="./image/search-icon.png" alt="search icon" class="icon--menu-pane">Find Group</li>
+			<li><img src="./image/plus-icon.png" alt="plus icon" class="icon--menu-pane">Create Group</li>
+			<li><img src="./image/list-icon.png" alt="list icon" class="icon--menu-pane">Your Groups</li>
+			<ul class="menu-list menu-list-deeper">
+				<li>BCIT CST SET B</li>
+				<li>BCIT CST SET C</li>
+				<li>Dos Tacos</li>
+			</ul>
+			<li><a href="./preference.html"><img src="./image/setting-icon.png" alt="setting icon" class="icon--menu-pane">Settings</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="box-container-group">
+			<div class="box-top">
+				<p>Created: Sept 9, 2018</p>
+				<p>Created by: Jun Jeong</p>
+			</div>
+			<div class="box-container--group">
+				<p>SHARE TASK LIST</p>
+			</div>
 		</div>
-		<div class="menu-panel">
-  				<h1 class="title title-menu">MENU</h1>
-  				<img src="./image/close-button.png" alt="close button" width="21" height="21" class="close-button-img close-button-img--menu" />
- 				  <ul class="menu-list">
-  				    <li><img src="./image/search-icon.png" alt="search icon" class="icon--menu-pane">Find Group</li>
-   					<li><img src="./image/plus-icon.png" alt="plus icon" class="icon--menu-pane">Create Group</li>
-   				    <li><img src="./image/list-icon.png" alt="list icon" class="icon--menu-pane">Your Groups</li>
-     		     <ul class="menu-list menu-list-deeper">
-        		<li>BCIT CST SET B</li>
-        		<li>BCIT CST SET C</li>
-        		<li>Dos Tacos</li>
-      				</ul>
-      			<li><a href="./preference.html"><img src="./image/setting-icon.png" alt="setting icon" class="icon--menu-pane">Settings</a></li>
-    		</ul>
-  		</div>
-		<div class="container">
-			<div class ="box-container-group">
-				<div class ="box-top">
-					<p>Created: Sept 9, 2018</p>
-					<p>Created by: Jun Jeong</p>
-				</div>
-				<div class = "box-container--group">
-					<p>SHARE TASK LIST</p>
-				</div>
+		<div class="box-container-group">
+			<div class="box-top">
+				<p>DESCRIPTION</p>
 			</div>
-			<div class ="box-container-group">
-				<div class ="box-top">
-					<p>DESCRIPTION</p>
-				</div>
-				<div class = "box-container--group">
-					<p>Simply dummy text that will be on here as a plce holder text , just like lorem ipsum</p>
-				</div>
+			<div class="box-container--group">
+				<p>Simply dummy text that will be on here as a plce holder text , just like lorem ipsum</p>
 			</div>
-			<div class ="box-container-group">
-				<div class ="box-top">
-					<p>MEMBERS (23)</p>
-				</div>
-				<div class = "box-container--group-1">
-					<div class ="name-container-1">
-						<p>James</p>
-						<p>John</p>
-						<p>Jahala</p>
-						<p>Jay</p>
-						<p>Jquery</p>
-						<p>JSON</p>
-					</div>
-					<div class ="name-container-2">
-						<p>Joanne</p>
-						<p>Jolly</p>
-						<p>Jimmy</p>
-						<p>Johnson</p>
-						<p>Javascript</p>
-						<p>Jason</p>
-					</div>
-				</div>
+		</div>
+		<div class="box-container-group">
+			<div class="box-top">
+				<p>MEMBERS (23)</p>
 			</div>
-			<div class ="box-container-group">
-				<div class = "box-container--group">
-					<p>EXIT GROUP</p>
+			<div class="box-container--group-1">
+				<div class="name-container-1">
+					<p>James</p>
+					<p>John</p>
+					<p>Jahala</p>
+					<p>Jay</p>
+					<p>Jquery</p>
+					<p>JSON</p>
+				</div>
+				<div class="name-container-2">
+					<p>Joanne</p>
+					<p>Jolly</p>
+					<p>Jimmy</p>
+					<p>Johnson</p>
+					<p>Javascript</p>
+					<p>Jason</p>
 				</div>
 			</div>
 		</div>
-  </body>
+		<div class="box-container-group">
+			<div class="box-container--group">
+				<p>EXIT GROUP</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+	<script src="./js/menu-pane.js"></script>
+	<script src="./js/universal.js"></script>
+</body>
+
 </html>
