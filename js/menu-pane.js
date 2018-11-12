@@ -5,10 +5,10 @@ $(document).ready(function() {
     var animationSpeed = 400;
 
     menuButton.click(function() {
-        menuPanel.slideToggle(animationSpeed);
+        menuPanel.animate({width: 'toggle'}, 200);
     });
 
     exitButton.click(function() {
-        menuPanel.slideToggle(animationSpeed);
+        menuPanel.animate({width: 'toggle'}, 200);
     });
 });

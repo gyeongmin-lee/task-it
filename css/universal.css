@@ -115,6 +115,12 @@ p.content {
     width: 80%;
     height: 100%;
     display: none;
+
+    text-overflow: ellipsis;
+
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .title-menu {
