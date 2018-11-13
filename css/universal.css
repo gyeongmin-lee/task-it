@@ -96,8 +96,8 @@ p.content {
     background-image: url("../image/down-arrow.png");
 }
 
-.setting-button {
-	display: inline-block;
+.setting-button > img {
+    top: 10px;
 }
 
 .close-button-img {
@@ -123,10 +123,10 @@ p.content {
 
 .setting-button-img-nav {
     position: absolute;
-    width: 35px;
-    height: 35px;
-    top: 15px;
-    right: 10px;
+    width: 32px;
+    height: 32px;
+    top: 9px;
+    right: 9px;
 }
 
 .button--menu {
@@ -440,6 +440,12 @@ button.dropdown {
 	height: 30px;
 }
 
+.setting-button-img-nav-preference {
+    position: relative;
+    top: 6px;
+    right: 6px;
+}
+
 .theme-option--preference {
 	width: 50%;
 	float: left;
@@ -511,22 +517,7 @@ button.dropdown {
 
 /** home page **/
 .nav-index {
-	height: 70px;
-}
-
-.title--index {
-	font-size: 25pt;
-	line-height: 65px;
-}
-
-.button--menu--index {
-	top: 15px;
-    left: 9px;
-}
-
-.container--index {
-	margin-top: calc(75px + 2.5%);
-    text-align: left;
+	height: 50px;
 }
 
 .searching--index {
