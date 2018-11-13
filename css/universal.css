@@ -102,7 +102,7 @@ p.content {
 
 .close-button-img {
     float: right;
-    position: inherit;
+    position: fixed;
     top: 16px;
     right: 10px;
 }
@@ -119,6 +119,14 @@ p.content {
     height: 32px;
     top: 9px;
     right: 9px;
+}
+
+.setting-button-img-nav {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 15px;
+    right: 10px;
 }
 
 .button--menu {
@@ -437,7 +445,13 @@ button.dropdown {
 	float: left;
 	text-align: center;
 }
+
+.box-top-title--preference {
+	font-size: 17pt;
+}
+
 .content--preference{
+	color: var(--sub-text-color);
 	font-size: 15pt;
 	font-weight: 250;
 }
@@ -476,6 +490,8 @@ button.dropdown {
 }
 .exit-group--preference {
 	text-decoration: underline;
+	font-weight: 250;
+	color: var(--sub1-text-color)
 }
 
 .info--preference {
@@ -493,6 +509,95 @@ button.dropdown {
 	margin-right: 10px;
 }
 
+/** home page **/
+.nav-index {
+	height: 70px;
+}
+
+.title--index {
+	font-size: 25pt;
+	line-height: 65px;
+}
+
+.button--menu--index {
+	top: 15px;
+    left: 9px;
+}
+
+.container--index {
+	margin-top: calc(75px + 2.5%);
+    text-align: left;
+}
+
+.searching--index {
+	background-color: 2px solid var(--sub1-bg-color);
+	border: 0px;
+	border-bottom: 2px solid #808080;
+	margin: 10px;
+	width: 95%;
+	padding-top: 5px;
+	padding-left: 5px;
+	font-size: 15pt;
+	color: var(--sub-text-color);
+}
+
+.searching--index::placeholder {
+	font-size: 15pt;
+	color: var(--sub-text-color);
+}
+
+.content--index{
+	color: var(--sub-text-color);
+	font-size: 15pt;
+	font-weight: 250;
+}
+
+.box-top-title--index {
+	font-size: 18pt;
+	font-weight: 300;
+}
+
+.group-box-content--index {
+	height: 150px;
+	overflow: scroll;
+}
+
+.group--index {
+	border-bottom: 2px solid var(--sub1-bg-color);
+	width: 98%;
+	margin: 0 auto;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.group-option--index {
+	float: right;
+	padding-top: 4px;
+}
+.exit-group--index {
+	text-decoration: underline;
+	font-weight: 250;
+	color: var(--sub-text-color);
+}
+
+.info--index {
+	float: right;
+	padding-right: 2px;
+	padding-left: 2px;
+}
+
+.create-group-button--index {
+	position: fixed;
+    right: 10px;
+    bottom: 10px;
+	width: 150px;
+	height: 40px;
+	text-align: center;
+	font-size: 15pt;
+	line-height: 40px;
+	font-weight: 300;
+	
+}
 
 /** group Info **/
 
