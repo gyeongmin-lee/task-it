@@ -50,6 +50,7 @@ a, a:link, a:visited, a:hover, a:active {
     overflow: hidden;
 }
 
+
 .title {
     margin: 0;
     font-size: 18pt;
@@ -598,7 +599,6 @@ button.dropdown {
 
 .box-container--group-1 {
     padding: 10px;
-    overflow: scroll;
 }
 
 .name-container-1{
@@ -614,15 +614,46 @@ button.dropdown {
 }
 
 .box-container-group {
-    width: 25%;
+    width: 80%;
     background-color: var(--sub2-bg-color);
     box-shadow: 0px 2px 2px #000000;
     border-radius: 8px;
     margin: 2.5% auto;
-    overflow: hidden;
+    font-size: 11pt;
+}
+
+.box-container-group p {
+    font-weight: 300;
+    text-align: center;
+}
+
+.box-container-group h1 {
     text-align: center;
     font-size: 15pt;
 }
+
+/** sign up/sign in page **/
+
+.box-container-signup {
+    width: 80%;
+    background-color: var(--sub2-bg-color);
+    box-shadow: 0px 2px 2px #000000;
+    border-radius: 8px;
+    margin: 4% auto;
+    font-size: 11pt;
+}
+
+.box-container-signup p {
+    font-weight: 300;
+    color: #C6C6C6;
+}
+
+.RememberMe{
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 
 /* Tablets */
 @media only screen and (min-width: 600px) {
