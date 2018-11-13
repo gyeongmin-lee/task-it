@@ -202,6 +202,20 @@ p.content {
     padding: 0 10px;
 }
 
+.textbox {
+	background-color: 2px solid var(--sub1-bg-color);
+	border: 0px;
+	border-bottom: 2px solid #808080;
+	margin: 10px;
+	font-size: 15pt;
+	color: var(--sub-text-color);
+}
+
+.textbox::placeholder {
+	font-size: 15pt;
+	color: var(--sub-text-color);
+}
+
 /** TASK LIST **/
 .title--task {
     font-size: 16pt;
@@ -521,22 +535,14 @@ button.dropdown {
 	height: 50px;
 }
 
-.searching--index {
-	background-color: 2px solid var(--sub1-bg-color);
-	border: 0px;
-	border-bottom: 2px solid #808080;
-	margin: 10px;
+.searching--index {	
 	width: 95%;
 	padding-top: 5px;
 	padding-left: 5px;
-	font-size: 15pt;
-	color: var(--sub-text-color);
+	
 }
 
-.searching--index::placeholder {
-	font-size: 15pt;
-	color: var(--sub-text-color);
-}
+
 
 .content--index{
 	color: var(--sub-text-color);
@@ -635,7 +641,7 @@ button.dropdown {
 /** sign up/sign in page **/
 
 .box-container-signup {
-    width: 80%;
+    width: 95%;
     background-color: var(--sub2-bg-color);
     box-shadow: 0px 2px 2px #000000;
     border-radius: 8px;
@@ -654,6 +660,15 @@ button.dropdown {
     margin-bottom: 5%;
 }
 
+.textbox--signup {
+	width: 100%;
+	margin: 0;
+}
+
+.textbox--signin {
+	width: 100%;
+	margin: 0;
+}
 
 /* Tablets */
 @media only screen and (min-width: 600px) {
