@@ -12,13 +12,14 @@ html {
 }
 
 html.light {
-    --main-bg-color: #303030;
-    --sub1-bg-color: #363636;
-    --sub2-bg-color: #404040;
-    --main-text-color: #FFFFFF;
-    --sub-text-color: #C6C6C6;
+    --main-bg-color: #FFFFFF;
+    --sub1-bg-color: #C6C6C6;
+    --sub2-bg-color: #CFCFCF;
+    --main-text-color: #303030;
+    --sub-text-color: #363636;
     --notdone-color: #FF3B30;
     --done-color: #28CD3C;
+	--shadow-color: #EFEFEF;
 }
 
 body {
@@ -489,12 +490,16 @@ button.dropdown {
 }
 
 .checkbox--preference {
-	width: 10px;
-	height: 10px;
-	background-color: #FFFFFF;
+	width: 15px;
+	height: 15px;
+	background-color: var(--main-text-color);
 	border: 1px solid var(--shadow-color);
 	display: inline-block;
 	margin-right: 5px;
+}
+
+.checkbox-checked--preference {
+	background-color: var(--shadow-color);
 }
 
 .edit-icon--preference {

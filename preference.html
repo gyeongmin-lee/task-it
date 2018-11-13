@@ -21,12 +21,14 @@
         <span class="box-top-title--preference">THEME</span>
       </div>
       <div class="box-container--preference">
+	    <form>
         <div class="theme-option--preference">
-          <span class="checkbox--preference"></span><span class="content--preference">Dark</span>
+          <input type ="radio" name="theme" id = "dark_theme" class="checkbox--preference"/><span class="content--preference">Dark</span>
         </div>
         <div class="theme-option--preference">
-          <span class="checkbox--preference"></span><span class="content--preference">Light</span>
+          <input type="radio" name="theme" id = "light_theme" class="checkbox--preference"/><span class="content--preference">Light</span>
         </div>
+		</form>
       </div>
     </div>
 
@@ -94,7 +96,10 @@
   <div class="box-container  preference--button">CANCEL</div>
   <div class="box-container  preference--button">SAVE</div>
 
-
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+	<script src="./js/universal.js"></script>
+	<script src="./js/preference.js"></script>
 
 </body>
 
