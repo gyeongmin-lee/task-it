@@ -365,25 +365,65 @@ button.dropdown {
 .title--landing-page{
 	font-size: 40pt;
 	text-align: center;
-	margin-top: 40px;
+	margin: 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .body--landing-page {
 	margin: 20px;
 	font-size: 13pt;
+	font-weight: 300;
+	/*height: 60%;*/
 }
 
 .checkbox--landing-page {
-	float: left;
-	clear: left;
+	float: none;
 	position: unset;
 	margin: 10px;
+	display:inline-block;
+	vertical-align: middle;
 }
 
-.nfinished--landing-page {
+.landing-page--button {
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	margin-top: 15px;
+	font-size: 20pt;
+}
+
+.filterSort--landing-page {
 	float: left;
-	height: 100px;
-	
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.section--landing-page {
+	margin-top: 15px;
+}
+
+.group-list--landing-page {
+	box-shadow: none;
+	border-radius: 0px;
+	width: 75%;
+	font-size: 12pt;
+}
+
+.groups--landing-page {
+	border-bottom: 2px solid var(--sub1-bg-color);
+	margin: 0 auto;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.group-option--landing-page {
+    float: right;	
+}
+
+.join-group--landing-page {
+	text-decoration: underline;
+	font-size: 10pt;
 }
 
 /** Preference **/
