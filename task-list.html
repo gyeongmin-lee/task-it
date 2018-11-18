@@ -36,22 +36,20 @@
     <div class="task-filter-sort-bar box-container">
       <div class="filter filter--task">
         <h2 class="label label--filter">FILTER:</h2>
-        <button class="dropdown dropdown--filter">All<i class="dropdown-icon dropdown-icon--task"></i></button>
-        <ul class="dropdown-content dropdown-content--filter">
-          <li>All</li>
-          <li>In Progress</li>
-          <li>Done</li>
-        </ul>
+        <select class="dropdown dropdown--filter">
+          <option value="all">All</option>
+          <option value="inprogress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
       </div>
 
       <div class="sort sort--task">
         <h2 class="label label--sort">SORT:</h2>
-        <button class="dropdown dropdown-content--sort">Date<i class="dropdown-icon dropdown-icon--task"></i></button>
-        <ul class="dropdown-content dropdown-content--sort">
-          <li>Due Date</li>
-          <li>Number of People Done</li>
-          <li>Created Date</li>
-        </ul>
+        <select class="dropdown dropdown--sort">
+          <option value="duedate">Due Date</option>
+          <option value="completion">Completion</option>
+          <option value="creationdate">Creation Date</option>
+        </select>
       </div>
     </div>
     <div class="container--task">

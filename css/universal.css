@@ -74,7 +74,7 @@ a, a:link, a:visited, a:hover, a:active {
     margin: 0;
     font-size: 12pt;
     font-weight: 300;
-    color: var(--main-text-color);
+    color: var(--sub-text-color);
 }
 
 .title--nav {
@@ -361,16 +361,15 @@ p.content {
     overflow: hidden;
 }
 
-
-.dropdown-content {
-    display: none;
+.dropdown {
+    background-color: var(--sub1-bg-color);
+    color: var(--sub-text-color);
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
 }
 
-.dropdown-content li {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+
 
 .filter--task {
     float: left;
