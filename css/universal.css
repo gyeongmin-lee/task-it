@@ -351,6 +351,7 @@ p.content {
 }
 
 .close-button-img--people {
+    position: inherit;
     margin-top: 8px;
     margin-right: 5px;
 }
@@ -392,6 +393,10 @@ button.dropdown {
     padding: 4px 6px;
     font-weight: 300;
     font-size: 12pt;
+}
+
+.container--people {
+    /*display: none;*/
 }
 
 
