@@ -687,10 +687,34 @@ button.dropdown {
 
 /* Tablets */
 @media only screen and (min-width: 600px) {
+    .container--task {
+        column-count: 2;
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-gap: 0;
+    }
 
+    .box-container {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-top: 0;
+    }
 }
 
 /* Desktop */
 @media only screen and (min-width: 1200px) {
+    .container--task {
+        column-count: 3;
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-gap: 0;
+    }
 
+    .box-container {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-top: 0;
+    }
 }
