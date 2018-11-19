@@ -1,6 +1,11 @@
 $(document).ready(function() {
+    appendTasks();
     toggleList();   
     toggleTaskState(); 
+
+    function appendTasks() {
+
+    }
 
     function toggleList() {
         var toggleDuration = 100;
@@ -30,5 +35,9 @@ $(document).ready(function() {
             $(this).toggleClass("checkbox-not-checked");
             $(this).toggleClass("checkbox-checked");
         })
+    }
+
+    function addTask() {
+        
     }
 });
