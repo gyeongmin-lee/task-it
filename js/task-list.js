@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    toggleList();    
+    toggleList();   
+    toggleTaskState(); 
 
     function toggleList() {
         var toggleDuration = 100;
@@ -22,5 +23,12 @@ $(document).ready(function() {
             $(this).parent().parent().slideUp(toggleDuration);
             $(this).parent().parent().siblings(".box-bottom").children().children().removeClass("rotated");
         });
+    }
+
+    function toggleTaskState() {
+        $(".checkbox").on("click", function(e) {
+            $(this).toggleClass("checkbox-not-checked");
+            $(this).toggleClass("checkbox-checked");
+        })
     }
 });
