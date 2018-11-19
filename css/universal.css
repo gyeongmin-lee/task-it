@@ -326,7 +326,7 @@ p.content {
     float: left;
 }
 
-.title--list-not-done {
+.title--list-inprogress {
     font-size: 16pt;
     margin: 5px;
     color: var(--notdone-color);
