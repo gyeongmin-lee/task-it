@@ -697,6 +697,19 @@ button.dropdown {
 	margin: 0;
 }
 
+/** Create group page **/
+.box-container--CreateGroup {
+    padding: 10px;
+}
+
+.GroupHead{
+    margin: 0 0;
+}
+
+.box-container--CreateGroup--Description{
+    padding-bottom: 200px;
+    padding: 10 200;
+}
 /* Tablets */
 @media only screen and (min-width: 600px) {
     .container--task {
