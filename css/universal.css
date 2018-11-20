@@ -703,14 +703,22 @@ button.dropdown {
         column-count: 2;
         -moz-column-count: 2;
         -webkit-column-count: 2;
-        column-gap: 0;
+
+        column-gap: 2.5%;
+        -moz-column-gap: 2.5%;
+        -webkit-column-gap: 2.5%;
+
+        width: 95%;
+        margin: 0 auto;
     }
 
-    .box-container {
+    .box-container--task {
         -webkit-column-break-inside: avoid;
         page-break-inside: avoid;
         break-inside: avoid;
         margin-top: 0;
+        display: inline-block;
+        width: 100%;
     }
 }
 
@@ -720,13 +728,44 @@ button.dropdown {
         column-count: 3;
         -moz-column-count: 3;
         -webkit-column-count: 3;
-        column-gap: 0;
+
+        column-gap: 1.25%;
+        -moz-column-gap: 1.25%;
+        -webkit-column-gap: 1.25%;
+
+        width: 95%;
+        margin: 0 auto;
     }
 
-    .box-container {
+    .box-container--task {
         -webkit-column-break-inside: avoid;
         page-break-inside: avoid;
         break-inside: avoid;
         margin-top: 0;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .menu-panel {
+        display: block;
+        width: 25%;
+    }
+
+    .container {
+        width: 75%;
+        float: right;
+    }
+
+    .close-button-img--menu {
+        display: none;
+    }
+
+    .nav {
+        width: 75%;
+        right: 0;
+    }
+
+    .button--menu {
+        display: none;
     }
 }
