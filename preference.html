@@ -9,10 +9,9 @@
 </head>
 
 <body>
-  <div class="nav nav--task-top">
+  <div class="nav">
     <h1 class="title title--nav title--nav-settings"><img class="setting-button-img-nav-preference" src="./image/setting-icon.png" alt="setting icon" width="30" height="30" />SETTINGS</h1>
-    <!-- TODO THE CLOSE BUTTON SHOULD GO BACK A PAGE, NOT TO THE INDEX PAGE. WILL FIX IT LATER USING JQUERY.-->
-    <a href="./index.html"><img src="./image/close-button.png" alt="close button" width="21" height="21" class="close-button-img" /></a>
+    <img src="./image/close-button.png" alt="close button" width="21" height="21" class="close-button-img close-goback" />
   </div>
 
   <div class="container">
@@ -93,8 +92,8 @@
     </div>
   </div>
 
-  <div class="box-container  preference--button">CANCEL</div>
-  <div class="box-container  preference--button">SAVE</div>
+  <button class="button preference--button">CANCEL</button>
+  <button class="button preference--button">SAVE</button>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>

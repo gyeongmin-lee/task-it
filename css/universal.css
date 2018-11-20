@@ -221,18 +221,57 @@ p.content {
     padding: 0 10px;
 }
 
+.button {
+	background-color: var(--sub2-bg-color);
+	border: 0px;
+	color: var(--main-text-color);
+	border-radius: 8px;
+	box-shadow: 0px 1px 3px var(--shadow-color);
+	font-family: Roboto;
+	font-size: 15pt;
+	font-weight: 300;
+	
+	
+}
 .textbox {
 	background-color: 2px solid var(--sub1-bg-color);
 	border: 0px;
-	border-bottom: 2px solid #808080;
-	margin: 10px;
-	font-size: 15pt;
-	color: var(--sub-text-color);
+	border-bottom: 1px solid var(--sub-text-color);
+    margin: 10px;
+    width: calc(100% - 20px);
+    font-size: 14pt;
+    font-family: Roboto;
+    font-weight: 300;
+	color: var(--main-text-color);
 }
 
 .textbox::placeholder {
-	font-size: 15pt;
+    font-size: 14pt;
 	color: var(--sub-text-color);
+}
+
+.textbox--area {
+    border: 1px solid var(--sub-text-color);
+    width: calc(100% - 25px);
+    font-size: 11pt;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.textbox--area::placeholder {
+    font-size: 11pt;
+}
+
+.input--date {
+    background-color: var(--sub2-bg-color);
+    color: var(--sub-text-color);
+    border: 1px solid var(--sub-text-color);
+    margin-left: 5px;
+    font-family: Roboto;
+}
+
+.label--date {
+    margin-left: 5px;
 }
 
 /** TASK LIST **/
@@ -554,7 +593,7 @@ button.dropdown {
 	float: right;
 	text-align: center;
 	line-height: 35px;
-	margin-right: 10px;
+	margin-right: 2.5%;
 }
 
 /** home page **/
@@ -716,14 +755,22 @@ button.dropdown {
         column-count: 2;
         -moz-column-count: 2;
         -webkit-column-count: 2;
-        column-gap: 0;
+
+        column-gap: 2.5%;
+        -moz-column-gap: 2.5%;
+        -webkit-column-gap: 2.5%;
+
+        width: 95%;
+        margin: 0 auto;
     }
 
-    .box-container {
+    .box-container--task {
         -webkit-column-break-inside: avoid;
         page-break-inside: avoid;
         break-inside: avoid;
         margin-top: 0;
+        display: inline-block;
+        width: 100%;
     }
 }
 
@@ -733,13 +780,49 @@ button.dropdown {
         column-count: 3;
         -moz-column-count: 3;
         -webkit-column-count: 3;
-        column-gap: 0;
+
+        column-gap: 1.25%;
+        -moz-column-gap: 1.25%;
+        -webkit-column-gap: 1.25%;
+
+        width: 95%;
+        margin: 0 auto;
     }
 
-    .box-container {
+    .box-container--task {
         -webkit-column-break-inside: avoid;
         page-break-inside: avoid;
         break-inside: avoid;
         margin-top: 0;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .menu-panel {
+        display: block;
+        width: 25%;
+    }
+
+    .container--task-list, .container--group-info {
+        width: 75%;
+        float: right;
+        margin-top: 50px;
+    }
+
+    .close-button-img--menu {
+        display: none;
+    }
+
+    .nav--task-top {
+        width: 75%;
+        right: 0;
+    }
+
+    .button--menu {
+        display: none;
+    }
+
+    .task-filter-sort-bar {
+        margin: 1.25% auto;
     }
 }
