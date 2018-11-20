@@ -751,21 +751,26 @@ button.dropdown {
         width: 25%;
     }
 
-    .container {
+    .container--task-list, .container--group-info {
         width: 75%;
         float: right;
+        margin-top: 50px;
     }
 
     .close-button-img--menu {
         display: none;
     }
 
-    .nav {
+    .nav--task-top {
         width: 75%;
         right: 0;
     }
 
     .button--menu {
         display: none;
+    }
+
+    .task-filter-sort-bar {
+        margin: 1.25% auto;
     }
 }
