@@ -749,11 +749,12 @@ button.dropdown {
     border-radius: 8px;
     margin: 4% auto;
     font-size: 11pt;
+	
 }
 
 .box-container-signup p {
     font-weight: 300;
-    color: #C6C6C6;
+    color: var(--sub-text-color);
 }
 
 .RememberMe{
@@ -761,6 +762,14 @@ button.dropdown {
     margin-top: 5%;
     margin-bottom: 5%;
 }
+
+.button-signin {
+	width: 95%;
+	display: block;
+	margin: 4% auto;
+	padding: 10px;
+}
+	
 
 .textbox--signup {
 	width: 100%;
