@@ -62,13 +62,13 @@ $(document).ready(function() {
         })
     }
 
-    /*
+    
     function closeTaskMenu() {
         $(".button--cancel-task").on("click", function(e) {
             e.preventDefault();
             console.log("HI");
             $("#edit-add-task").remove();
         })
-    }*/
+    }
 });
 
