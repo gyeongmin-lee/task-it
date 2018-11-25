@@ -695,8 +695,9 @@ button.dropdown {
 	text-align: center;
 	font-size: 15pt;
 	line-height: 40px;
-	font-weight: 300;
-	
+    font-weight: 300;
+    background-color: var(--sub-text-color);
+    color: var(--main-bg-color);
 }
 
 /** group Info **/
@@ -839,7 +840,7 @@ button.dropdown {
         width: 25%;
     }
 
-    .container--task-list, .container--group-info {
+    .container {
         width: 75%;
         float: right;
         margin-top: 50px;
@@ -849,7 +850,7 @@ button.dropdown {
         display: none;
     }
 
-    .nav--task-top {
+    .nav {
         width: 75%;
         right: 0;
     }
