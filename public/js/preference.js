@@ -42,7 +42,7 @@ $(document).ready(function () {
 
 		} else if (this.id == "dark_theme") {
 			$("html").removeClass("light");
-			$(".info--preference").attr("src", "./image/Info-icon.png");
+			$(".info--preference").attr("src", "./image/info-icon.png");
 			$(".edit-icon--preference").attr("src", "./image/edit-button.png");
 			$(".setting-button-img-nav-preference").attr("src", "./image/setting-icon.png");
 			$(".close-button-img").attr("src", "./image/close-button.png");
