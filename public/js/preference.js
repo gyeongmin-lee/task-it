@@ -30,7 +30,7 @@ var emailElement = document.getElementById("email");
 // initialize Firebase
 initFirebaseAuth();
 
-
+var input = $("<input type = \"text\"> class = \"content--preference\" ");
 $(document).ready(function () {
 	$("input[type=radio][name=theme]").change(function () {
 		if (this.id == "light_theme") {
@@ -49,3 +49,4 @@ $(document).ready(function () {
 		}
 	});
 });
+	
