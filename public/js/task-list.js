@@ -1,46 +1,111 @@
-$(document).ready(function() {
-    appendTasks();
-    toggleList();   
-    toggleTaskState();
-    addTaskMenu();
-    closeTaskMenu();
-
-    function appendTasks() {
-
+$(document).ready(function () {
+    function loadMessages() {
+        var callback = function (snap) {
+            var data = snap.val();
+            var title = data.title;
+            var detail = data.detail;
+            var duedate = data.duedate;
+            var donePeople = data.done;
+            var inprogressPeople = data.inprogress;
+    
+            displayTask(snap.key, title, detail, duedate, donePeople, inprogressPeople);
+        };
+        var taskRef = firebase.database().ref('/tasks/');
+        taskRef.on('child_added', callback);
+        taskRef.on('child_changed', callback);
     }
+    
+    function displayTask(key, title, detail, duedate, donePeople, inProgressPeople) {
+        $(TASK_TEMPLATE).appendTo(".container--task").attr("id", key);
+        var task = $("#" + key);
+        task.find('.title--task').text(title);
+        task.find('.content--task').text(detail);
+        task.find('.content--due-date').text(duedate);
+        
+        var doneCount = 0;
+        for (var person in donePeople) {
+            task.find('.container--people-done > .people-list').append("<li>" + donePeople[person] + "</li>");
+            doneCount++;
+        }
+        task.find('.done-people').text(doneCount + " ");
+    
+        var inprogressCount = 0;
+        for (var person in inProgressPeople) {
+            task.find('.container--people-inprogress > .people-list').append("<li>" + inProgressPeople[person] + "</li>");
+            inprogressCount++;
+        }
+        task.find('.in-progress-people').text(inprogressCount + " ");
+        toggleTaskState();
+        toggleList();
+    }
+    
+    var TASK_TEMPLATE =
+        '<div class="box-container box-container--task">' +
+            '<div class="checkbox checkbox-not-checked"></div>' +
+            '<div class="task-left-side">' +
+                '<h1 class="title title--task"></h1>' +
+                '<p class="content content--task"></p>' +
+            '</div>' +
+            '<div class="box-bottom">' +
+                '<p class="content content--number-of-people content--inprogress-people"><span class="in-progress-people"></span>inprogress<i class="dropdown-icon dropdown-icon--task"></i></p>' +
+                '<p class="content content--number-of-people content--done-people"><span class="done-people"></span> done<i class="dropdown-icon dropdown-icon--task"></i></p>' +
+                '<p class="content content--due-date"></p>' +
+            '</div>' +
+            '<div class="container--people container--people-inprogress">' +
+                '<div class="box-top">' +
+                    '<h1 class="title title--list-inprogress">IN PROGRESS</h1>' +
+                    '<img src="./image/close-button.png" alt="close button" width="21" height="21" class="close-button-img close-button-img--people" />' +
+                '</div>' +
+                '<ul class="people-list"></ul>' +
+            '</div>' +
+            '<div class="container--people container--people-done">' +
+                '<div class="box-top">' +
+                    '<h1 class="title title--list-done">DONE</h1>' +
+                    '<img src="./image/close-button.png" alt="close button" width="21" height="21" class="close-button-img close-button-img--people" />' +
+                '</div>' +
+                '<ul class="people-list"></ul>' +
+            '</div>' +
+        '</div>';
+
 
     function toggleList() {
         var toggleDuration = 100;
 
-        $(".content--inprogress-people").on("click", function(e) {
+        $(".content--inprogress-people").off();
+        $(".content--done-people").off();
+        $(".close-button-img--people").off();
+
+        $(".content--inprogress-people").on("click", function (e) {
             $(this).parent().nextAll().eq(1).hide();
             $(this).parent().nextAll().eq(0).slideToggle(toggleDuration);
             $(this).children().toggleClass("rotated");
             $(this).next().children().removeClass("rotated");
         });
-    
-        $(".content--done-people").on("click", function(e) {
+
+        $(".content--done-people").on("click", function (e) {
             $(this).parent().nextAll().eq(0).hide();
             $(this).parent().nextAll().eq(1).slideToggle(toggleDuration);
             $(this).children().toggleClass("rotated");
             $(this).prev().children().removeClass("rotated");
         });
-    
-        $(".close-button-img--people").on("click", function(e) {
+
+        $(".close-button-img--people").on("click", function (e) {
             $(this).parent().parent().slideUp(toggleDuration);
             $(this).parent().parent().siblings(".box-bottom").children().children().removeClass("rotated");
         });
     }
 
     function toggleTaskState() {
-        $(".checkbox").on("click", function(e) {
+        $(".checkbox").off();
+
+        $(".checkbox").on("click", function (e) {
             $(this).toggleClass("checkbox-not-checked");
             $(this).toggleClass("checkbox-checked");
         })
     }
 
     function addTaskMenu() {
-        $(".button--add-task").on("click", function(e) {
+        $(".button--add-task").on("click", function (e) {
             var container = $(".container--task");
             if ($("#edit-add-task").length == 0) {
                 var header = $('<div id="edit-add-task" class="box-container box-container--task">');
@@ -58,17 +123,23 @@ $(document).ready(function() {
                 form.append(inputTitle, inputDetail, dueLabel, inputDue, boxBottom);
                 header.append(form);
                 container.append(header);
-            }   
+            }
         })
     }
 
-    
+
     function closeTaskMenu() {
-        $(".button--cancel-task").on("click", function(e) {
+        $(".button--cancel-task").on("click", function (e) {
             e.preventDefault();
             console.log("HI");
             $("#edit-add-task").remove();
         })
     }
+
+        
+    loadMessages();
+
+    addTaskMenu();
+    closeTaskMenu();
 });
 

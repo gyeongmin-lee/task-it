@@ -305,11 +305,11 @@ p.content {
     background-size: cover;
 }
 
-#in-progress-people {
+.in-progress-people {
     color: var(--notdone-color);
 }
 
-#done-people {
+.done-people {
     color: var(--done-color);
 }
 
