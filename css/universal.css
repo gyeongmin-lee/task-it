@@ -737,18 +737,17 @@ button.dropdown {
 }
 
 /** Create group page **/
-.box-container--CreateGroup {
-    padding: 10px;
+
+.box-container-addGroup {
+    width: 95%;
+    background-color: var(--sub2-bg-color);
+    box-shadow: 0px 1px 3px var(--shadow-color);
+    border-radius: 8px;
+    margin-top: 80px;
+    margin: 2.5% auto;
+    overflow: hidden;
 }
 
-.GroupHead{
-    margin: 0 0;
-}
-
-.box-container--CreateGroup--Description{
-    padding-bottom: 200px;
-    padding: 10 200;
-}
 /* Tablets */
 @media only screen and (min-width: 600px) {
     .container--task {
