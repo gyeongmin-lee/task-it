@@ -7,28 +7,28 @@ $(document).ready(function () {
             var duedate = data.duedate;
             var donePeople = data.done;
             var inprogressPeople = data.inprogress;
-    
+
             displayTask(snap.key, title, detail, duedate, donePeople, inprogressPeople);
         };
         var taskRef = firebase.database().ref('/tasks/');
         taskRef.on('child_added', callback);
         taskRef.on('child_changed', callback);
     }
-    
+
     function displayTask(key, title, detail, duedate, donePeople, inProgressPeople) {
         $(TASK_TEMPLATE).appendTo(".container--task").attr("id", key);
         var task = $("#" + key);
         task.find('.title--task').text(title);
         task.find('.content--task').text(detail);
         task.find('.content--due-date').text(duedate);
-        
+
         var doneCount = 0;
         for (var person in donePeople) {
             task.find('.container--people-done > .people-list').append("<li>" + donePeople[person] + "</li>");
             doneCount++;
         }
         task.find('.done-people').text(doneCount + " ");
-    
+
         var inprogressCount = 0;
         for (var person in inProgressPeople) {
             task.find('.container--people-inprogress > .people-list').append("<li>" + inProgressPeople[person] + "</li>");
@@ -38,33 +38,57 @@ $(document).ready(function () {
         toggleTaskState();
         toggleList();
     }
-    
+
+    function onTaskFormSubmit(e) {
+        e.preventDefault();
+        title = $(".textbox--task-title").val();
+        detail = $(".textbox--area").val();
+        due = $(".input--date").val();
+        taskPost(title, detail, due);
+        $("#edit-add-task").remove();
+    }
+
+    function taskPost(taskTitle, taskDetail, taskDue) {
+        if (taskDue != null && taskDue != "") {
+            var date = new Date(due);
+            var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][date.getMonth()];
+            taskDue = month + ' ' + (date.getDate() + 1) + ', ' + date.getFullYear();
+        }
+
+        var newPostKey = firebase.database().ref('/tasks/').push({
+            detail: taskDetail || null,
+            title: taskTitle || null,
+            duedate: taskDue || null
+        }).key;
+    }
+
     var TASK_TEMPLATE =
         '<div class="box-container box-container--task">' +
-            '<div class="checkbox checkbox-not-checked"></div>' +
-            '<div class="task-left-side">' +
-                '<h1 class="title title--task"></h1>' +
-                '<p class="content content--task"></p>' +
-            '</div>' +
-            '<div class="box-bottom">' +
-                '<p class="content content--number-of-people content--inprogress-people"><span class="in-progress-people"></span>inprogress<i class="dropdown-icon dropdown-icon--task"></i></p>' +
-                '<p class="content content--number-of-people content--done-people"><span class="done-people"></span> done<i class="dropdown-icon dropdown-icon--task"></i></p>' +
-                '<p class="content content--due-date"></p>' +
-            '</div>' +
-            '<div class="container--people container--people-inprogress">' +
-                '<div class="box-top">' +
-                    '<h1 class="title title--list-inprogress">IN PROGRESS</h1>' +
-                    '<img src="./image/close-button.png" alt="close button" width="21" height="21" class="close-button-img close-button-img--people" />' +
-                '</div>' +
-                '<ul class="people-list"></ul>' +
-            '</div>' +
-            '<div class="container--people container--people-done">' +
-                '<div class="box-top">' +
-                    '<h1 class="title title--list-done">DONE</h1>' +
-                    '<img src="./image/close-button.png" alt="close button" width="21" height="21" class="close-button-img close-button-img--people" />' +
-                '</div>' +
-                '<ul class="people-list"></ul>' +
-            '</div>' +
+        '<div class="checkbox checkbox-not-checked"></div>' +
+        '<div class="task-left-side">' +
+        '<h1 class="title title--task"></h1>' +
+        '<p class="content content--task"></p>' +
+        '</div>' +
+        '<div class="box-bottom">' +
+        '<p class="content content--number-of-people content--inprogress-people"><span class="in-progress-people"></span>in progress<i class="dropdown-icon dropdown-icon--task"></i></p>' +
+        '<p class="content content--number-of-people content--done-people"><span class="done-people"></span> done<i class="dropdown-icon dropdown-icon--task"></i></p>' +
+        '<p class="content content--due-date"></p>' +
+        '</div>' +
+        '<div class="container--people container--people-inprogress">' +
+        '<div class="box-top">' +
+        '<h1 class="title title--list-inprogress">IN PROGRESS</h1>' +
+        '<img src="./image/close-button.png" alt="close button" width="21" height="21" class="close-button-img close-button-img--people" />' +
+        '</div>' +
+        '<ul class="people-list"></ul>' +
+        '</div>' +
+        '<div class="container--people container--people-done">' +
+        '<div class="box-top">' +
+        '<h1 class="title title--list-done">DONE</h1>' +
+        '<img src="./image/close-button.png" alt="close button" width="21" height="21" class="close-button-img close-button-img--people" />' +
+        '</div>' +
+        '<ul class="people-list"></ul>' +
+        '</div>' +
         '</div>';
 
 
@@ -109,7 +133,7 @@ $(document).ready(function () {
             var container = $(".container--task");
             if ($("#edit-add-task").length == 0) {
                 var header = $('<div id="edit-add-task" class="box-container box-container--task">');
-                var form = $('<form></form>');
+                var form = $('<form class="add-task-form" action="#"></form>');
                 var inputTitle = $('<input required="required" type="text" name="task-title" placeholder="Enter a task..." class="textbox textbox--task-title" />');
                 var inputDetail = $('<textarea class="textbox textbox--area" placeholder="Enter task details..." rows="4"></textarea>');
                 var dueLabel = $('<h2 class="label label--date">Select Due Date:</h2>');
@@ -124,19 +148,29 @@ $(document).ready(function () {
                 header.append(form);
                 container.append(header);
             }
-        })
+            closeTaskMenu();
+            saveTask();
+        });
     }
 
 
     function closeTaskMenu() {
+        $(".button--cancel-task").off();
+
         $(".button--cancel-task").on("click", function (e) {
             e.preventDefault();
-            console.log("HI");
             $("#edit-add-task").remove();
         })
     }
 
-        
+    function saveTask() {
+        $(".button--save-task").off();
+        $(document).on('submit', ".add-task-form", onTaskFormSubmit);
+    }
+
+
+
+
     loadMessages();
 
     addTaskMenu();
