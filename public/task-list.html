@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TASK APP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./css/universal.css">
+</head>
+
+<body>
+  <div class="nav nav--task-top">
+    <div class="button--menu">MENU</div>
+    <h1 class="title title--nav">Dummy Task Group</h1>
+    <a href="./group-info.html"><img src="./image/information-button.png" alt="information button" class="information-button-img-nav" /></a>
+  </div>
+
+
+  <div class="menu-panel">
+    <h1 class="title title-menu">MENU</h1>
+    <img src="./image/close-button.png" alt="close button" width="21" height="21" class="close-button-img close-button-img--menu" />
+    <ul class="menu-list">
+      <li><a href="./main.html"><img src="./image/search-icon.png" alt="search icon" class="icon--menu-pane">Find Group</a></li>
+      <li><img src="./image/plus-icon-white.png" alt="plus icon" class="icon--menu-pane">Create Group</li>
+      <li><img src="./image/list-icon.png" alt="list icon" class="icon--menu-pane">Your Groups</li>
+      <ul class="menu-list menu-list-deeper">
+        <li>BCIT CST SET B</li>
+        <li>BCIT CST SET C</li>
+        <li>Dos Tacos</li>
+      </ul>
+      <li><a href="./preference.html"><img src="./image/setting-icon.png" alt="setting icon" class="icon--menu-pane">Settings</a></li>
+    </ul>
+  </div>
+
+  <div class="container container--task-list">
+    <div class="task-filter-sort-bar box-container">
+      <div class="filter filter--task">
+        <h2 class="label label--filter">FILTER:</h2>
+        <select class="dropdown dropdown--filter">
+          <option value="all">All</option>
+          <option value="inprogress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+      </div>
+
+      <div class="sort sort--task">
+        <h2 class="label label--sort">SORT:</h2>
+        <select class="dropdown dropdown--sort">
+          <option value="duedate">Due Date</option>
+          <option value="completion">Completion</option>
+          <option value="creationdate">Creation Date</option>
+        </select>
+      </div>
+    </div>
+    <div class="container--task">
+    </div>
+  </div>
+  <div class="button button--add-task">
+    <img src="./image/plus-icon.png" alt="plus icon" class="icon--add-task">
+  </div>
+
+  <!-- Import and configure the Firebase SDK -->
+  <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+  <!-- If you do not want to serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+  <script src="./js/firebase-init.js"></script>
+
+  <!-- JQUERY IMPORT-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="./js/menu-pane.js"></script>
+  <script src="./js/task-list.js"></script>
+  <script src="./js/universal.js"></script>
+</body>
+
+</html>

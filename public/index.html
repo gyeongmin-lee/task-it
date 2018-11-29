@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
   <title>TASK APP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="./css/universal.css">
+  <link rel="stylesheet" href="css/universal.css">
 </head>
 
 <body>
@@ -76,8 +76,23 @@
         </div>
       </div>
     </div>
-    <div class="box-container landing-page--button"><a href="./index.html">GET STARTED!</a></div>
+    <button class=" button button-signin">
+      Sign Up
+    </button>
   </div>
+
+
+  <!-- Import and configure the Firebase SDK -->
+  <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+  <!-- If you do not want to serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+  <script src="./js/firebase-init.js"></script>
+
+  <!-- JQUERY IMPORT-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="./js/universal.js"></script>
+  <script src="./js/landing-page.js"></script>  
 </body>
 
 </html>

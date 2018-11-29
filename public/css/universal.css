@@ -70,6 +70,17 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 
+.button {
+	background-color: var(--sub2-bg-color);
+	border: 0px;
+	color: var(--main-text-color);
+	border-radius: 8px;
+	box-shadow: 0px 1px 3px var(--shadow-color);
+	font-family: Roboto;
+	font-size: 15pt;
+	font-weight: 300;	
+}
+
 .title {
     margin: 0;
     font-size: 18pt;
@@ -134,6 +145,7 @@ p.content {
 }
 
 .information-button-img-nav {
+    background: none;
     position: absolute;
     width: 32px;
     height: 32px;
@@ -221,20 +233,8 @@ p.content {
     padding: 0 10px;
 }
 
-.button {
-	background-color: var(--sub2-bg-color);
-	border: 0px;
-	color: var(--main-text-color);
-	border-radius: 8px;
-	box-shadow: 0px 1px 3px var(--shadow-color);
-	font-family: Roboto;
-	font-size: 15pt;
-	font-weight: 300;
-	
-	
-}
 .textbox {
-	background-color: 2px solid var(--sub1-bg-color);
+	background-color: 2px solid var(--sub2-bg-color);
 	border: 0px;
 	border-bottom: 1px solid var(--sub-text-color);
     margin: 10px;
@@ -251,27 +251,21 @@ p.content {
 }
 
 .textbox--area {
-    border: 1px solid var(--sub-text-color);
     width: calc(100% - 25px);
     font-size: 11pt;
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    background: var(--sub1-bg-color);
+    border-bottom: 0;
 }
 
 .textbox--area::placeholder {
     font-size: 11pt;
 }
 
-.input--date {
-    background-color: var(--sub2-bg-color);
-    color: var(--sub-text-color);
-    border: 1px solid var(--sub-text-color);
-    margin-left: 5px;
-    font-family: Roboto;
-}
 
-.label--date {
-    margin-left: 5px;
+.inline-buttons-container {
+    display: block;
 }
 
 /** TASK LIST **/
@@ -287,6 +281,12 @@ p.content {
     margin-right: 5px;
     border-radius: 5px;
 }
+
+/* TODO BUTTON FEEDBACK
+.box-bottom > .content--number-of-people:hover {
+    border: 1px solid var(--sub-text-color);
+}
+*/
 
 .box-bottom > .content--due-date {
     float: right;
@@ -305,11 +305,11 @@ p.content {
     background-size: cover;
 }
 
-#in-progress-people {
+.in-progress-people {
     color: var(--notdone-color);
 }
 
-#done-people {
+.done-people {
     color: var(--done-color);
 }
 
@@ -351,7 +351,7 @@ p.content {
     width: 48px;
     height: 48px;
 
-    background-color: var(--sub2-bg-color);
+    background-color: var(--sub-text-color);
     border-radius: 12px;
 
     box-shadow: 0px 0px 5px var(--shadow-color);
@@ -445,6 +445,42 @@ button.dropdown {
     display: none;
 }
 
+
+
+.button--cancel-task, .button--save-task {
+    float: right;
+    box-shadow: none;
+    background-color: var(--sub2-bg-color);
+    font-size: 14pt;
+    color: var(--sub-text-color);
+    height: 30px;
+}
+
+.button--cancel-task:hover, .button--save-task:hover {
+    background-color: var(--sub2-bg-color);
+    color: var(--main-text-color);
+    border: 1px solid var(--sub-text-color);
+    height: 28px;
+}
+
+.button--cancel-task {
+    margin-left: 5px;
+}
+
+.label--date {
+    margin-left: 12px;
+    margin-bottom: 5px;
+    font-size: 11pt;
+}
+
+
+.input--date {
+    background-color: var(--sub1-bg-color);
+    color: var(--sub-text-color);
+    font-family: Roboto;
+    border: none;
+    border-radius: 5px;
+}
 
 /** Landing Page **/
 .title--landing-page{
@@ -659,8 +695,9 @@ button.dropdown {
 	text-align: center;
 	font-size: 15pt;
 	line-height: 40px;
-	font-weight: 300;
-	
+    font-weight: 300;
+    background-color: var(--sub-text-color);
+    color: var(--main-bg-color);
 }
 
 /** group Info **/
@@ -713,11 +750,12 @@ button.dropdown {
     border-radius: 8px;
     margin: 4% auto;
     font-size: 11pt;
+	
 }
 
 .box-container-signup p {
     font-weight: 300;
-    color: #C6C6C6;
+    color: var(--sub-text-color);
 }
 
 .RememberMe{
@@ -725,6 +763,14 @@ button.dropdown {
     margin-top: 5%;
     margin-bottom: 5%;
 }
+
+.button-signin {
+	width: 95%;
+	display: block;
+	margin: 4% auto;
+	padding: 10px;
+}
+	
 
 .textbox--signup {
 	width: 100%;
@@ -771,6 +817,10 @@ button.dropdown {
         display: inline-block;
         width: 100%;
     }
+
+    .menu-panel {
+        width: 45%;
+    }
 }
 
 /* Desktop */
@@ -802,7 +852,7 @@ button.dropdown {
         width: 25%;
     }
 
-    .container--task-list, .container--group-info {
+    .container {
         width: 75%;
         float: right;
         margin-top: 50px;
@@ -812,7 +862,7 @@ button.dropdown {
         display: none;
     }
 
-    .nav--task-top {
+    .nav {
         width: 75%;
         right: 0;
     }
