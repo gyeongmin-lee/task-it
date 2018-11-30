@@ -119,7 +119,7 @@ $(document).ready(function () {
 		}).catch(function(error) {
 			console.log("error");
 		});
-		window.location.href = "./main.html";
+		//window.location.href = "./main.html";
 	});
 
 });
