@@ -623,6 +623,11 @@ button.dropdown {
 	padding-left: 2px;
 }
 
+.textbox--preference {
+	background-color: var(--sub2-bg-color); 
+	border: 0px;
+}
+
 .preference--button {
 	width: 90px;
 	height: 35px;

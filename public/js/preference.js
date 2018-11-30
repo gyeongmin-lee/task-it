@@ -27,10 +27,17 @@ function authStateObserver(user) {
 var userNameElement = document.getElementById("username");
 var emailElement = document.getElementById("email");
 
+var user = firebase.auth().currentUser;
+
+if (user) {
+  console.log(user.displayName);
+} else {
+	console.log("no user!");
+}
+
 // initialize Firebase
 initFirebaseAuth();
 
-var input = $("<input type = \"text\"> class = \"content--preference\" ");
 $(document).ready(function () {
 	$("input[type=radio][name=theme]").change(function () {
 		if (this.id == "light_theme") {
@@ -48,5 +55,71 @@ $(document).ready(function () {
 			$(".close-button-img").attr("src", "./image/close-button.png");
 		}
 	});
+	
+	 var changename = function () {
+        var $input = $("<input>", {
+            val: $(userNameElement).text(),
+            type: "text"
+        });
+		$input.addClass("content--preference");
+        $input.addClass("textbox--preference");
+		$input.attr("id", "username");
+        $("#username").replaceWith($input);
+        $input.on("blur", savename);
+        $input.select();
+    };
+	
+	
+    var savename = function () {
+        var $span = $("<span>", {
+            text: $("#username").val()
+        });
+        $span.addClass("content--preference");
+		$span.attr("id", "username");
+        $("#username").replaceWith($span);
+        $("#edit-username--preference").on("click", changename);
+    }
+	
+	var changeemail = function () {
+        var $input = $("<input>", {
+            val: $(emailElement).text(),
+            type: "text"
+        });
+		$input.addClass("content--preference");
+        $input.addClass("textbox--preference");
+		$input.attr("id", "email");
+        $("#email").replaceWith($input);
+        $input.on("blur", saveemail);
+        $input.select();
+    };
+	
+	var saveemail = function () {
+        var $span = $("<span>", {
+            text: $("#email").val()
+        });
+        $span.addClass("content--preference");
+		$span.attr("id", "email");
+        $("#email").replaceWith($span);
+        $("#edit-email--preference").on("click", changeemail);
+		
+    }
+	
+    $("#edit-username--preference").on("click", changename);
+    $("#edit-email--preference").on("click", changeemail);
+	
+	
+	$("#savebutton").on("click", function() {
+		var user = firebase.auth().currentUser;
+		user.updateProfile({
+			displayName: $("#username").text()
+		});
+		console.log("name changed");
+		user.updateEmail($("#email").text()).then(function() {
+			console.log("emailchanged");
+		}).catch(function(error) {
+			console.log("error");
+		});
+	});
+
 });
 	
