@@ -12,14 +12,14 @@ html {
 }
 
 html.light {
-    --main-bg-color: #FFFFFF;
-    --sub1-bg-color: #C6C6C6;
-    --sub2-bg-color: #CFCFCF;
+    --main-bg-color: #D6D6D6;
+    --sub1-bg-color: #B6B6B6;
+    --sub2-bg-color: #C6C6C6;
     --main-text-color: #303030;
     --sub-text-color: #363636;
     --notdone-color: #FF3B30;
     --done-color: #28CD3C;
-	--shadow-color: #EFEFEF;
+	--shadow-color: #E6E6E6;
 }
 
 .rotated {
