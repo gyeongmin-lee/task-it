@@ -168,7 +168,7 @@ $(document).ready(function () {
         $(document).on('submit', ".add-task-form", onTaskFormSubmit);
     }
 
-
+	
 
 
     loadMessages();

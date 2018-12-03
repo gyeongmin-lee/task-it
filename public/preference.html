@@ -40,7 +40,7 @@
       <div class="box-container--preference">
         <form>
           <div class="theme-option--preference">
-            <input type="radio" name="theme" id="dark_theme" class="checkbox--preference" /><span class="content--preference">Dark</span>
+            <input type="radio" name="theme" id="dark_theme" class="checkbox--preference" checked/><span class="content--preference">Dark</span>
           </div>
           <div class="theme-option--preference">
             <input type="radio" name="theme" id="light_theme" class="checkbox--preference" /><span class="content--preference">Light</span>
@@ -53,7 +53,7 @@
     <div class="box-container">
       <div class="box-top">
         <span class="box-top-title--preference">NAME</span>
-        <img src="./image/edit-button.png" alt="edit" width="20" height="20" class="edit-icon--preference" />
+        <img src="./image/edit-button.png" alt="edit" width="20" height="20" class="edit-icon--preference" id = "edit-username--preference"/>
       </div>
       <div>
         <div class="box-container--preference">
@@ -65,7 +65,7 @@
     <div class="box-container ">
       <div class="box-top">
         <span class="box-top-title--preference">EMAIL</span>
-        <img src="./image/edit-button.png" alt="edit" width="20" height="20" class="edit-icon--preference" />
+        <img src="./image/edit-button.png" alt="edit" width="20" height="20" class="edit-icon--preference"  id = "edit-email--preference"/>
       </div>
       <div>
         <div class="box-container--preference">
@@ -83,7 +83,7 @@
           <div class="group--preference">
             <span class="groups content--preference">BCIT CST SET B</span>
             <span class="group-option--preference">
-              <span class="exit-group--preference">Exit Group</span>
+              <a href="./main.html"><span class="exit-group--preference">Exit Group</span></a>
               <span><a href="./group-info.html">
                   <img src="./image/info-icon.png" alt="info" width="20" height="20" class="info--preference" /></a></span>
             </span>
@@ -91,14 +91,14 @@
           <div class="group--preference">
             <span class="groups content--preference">BCIT CST SET C</span>
             <span class="group-option--preference">
-              <span class="exit-group--preference">Exit Group</span>
+              <a href="./main.html"><span class="exit-group--preference">Exit Group</span></a>
               <span><a href="./group-info.html">
                   <img src="./image/info-icon.png" alt="info" width="20" height="20" class="info--preference" /></a></span>
             </span>
           </div>
           <div class="group--preference"><span class="groups content--preference">SFU Finance Club</span>
             <span class="group-option--preference">
-              <span class="exit-group--preference">Exit Group</span>
+              <a href="./main.html"><span class="exit-group--preference">Exit Group</span></a>
               <span><a href="./group-info.html">
                   <img src="./image/info-icon.png" alt="info" width="20" height="20" class="info--preference" /></a></span>
             </span>
@@ -110,8 +110,8 @@
     </div>
   </div>
 
-  <button class="button preference--button">CANCEL</button>
-  <button class="button preference--button">SAVE</button>
+  <a href="./main.html"><button class="button preference--button">CANCEL</button></a>
+  <button class="button preference--button" id = "savebutton">SAVE</button>
 
 
   <!-- Import and configure the Firebase SDK -->
