@@ -794,6 +794,7 @@ button.dropdown {
     overflow: hidden;
 }
 
+
 /* Tablets */
 @media only screen and (min-width: 600px) {
     .container--task {
@@ -820,6 +821,10 @@ button.dropdown {
 
     .menu-panel {
         width: 45%;
+    }
+
+    .create-group-button{
+        width: 100%;
     }
 }
 
@@ -873,5 +878,9 @@ button.dropdown {
 
     .task-filter-sort-bar {
         margin: 1.25% auto;
+    }
+
+    .create-group-button{
+        width: 100%;
     }
 }

@@ -9,9 +9,90 @@
 </head>
 
 <body>
-	<div class="nav nav--task-top">
+	<div class="nav">
 		<h1 class="title title--nav">Create Group</h1>
 	</div>
+
+	<div class="menu-panel">
+		<h1 class="title title-menu">MENU</h1>
+		<img src="./image/close-button.png" alt="close button" width="21" height="21" class="close-button-img close-button-img--menu" />
+		<ul class="menu-list">
+			<li><a href="./main.html"><img src="./image/search-icon.png" alt="search icon" class="icon--menu-pane">Find Group</a></li>
+			<li><a href="./create-group.html"><img src="./image/plus-icon-white.png" alt="plus icon" class="icon--menu-pane">Create Group</a></li>
+			<li><img src="./image/list-icon.png" alt="list icon" class="icon--menu-pane">Your Groups</li>
+			<ul class="menu-list menu-list-deeper">
+				<li>BCIT CST SET B</li>
+				<li>BCIT CST SET C</li>
+				<li>Dos Tacos</li>
+			</ul>
+			<li><a href="./preference.html"><img src="./image/setting-icon.png" alt="setting icon" class="icon--menu-pane">Settings</a></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<div class="box-container">
+			<form class="add-task-form" action="#">
+				<div class="box-top">
+					<h2>Group Description</h2>
+				</div>
+					<input required="required" type="text" name="task-title" placeholder="Enter your group name" class="textbox textbox--task-title" />
+					<div class="inline-buttons-container">
+						<button class="button button--cancel-task">CANCEL</button>
+						<button type="submit" value="Submit" class="button button--save-task">SAVE</button>
+					</div>
+				</div>
+			</form>	
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="box-container">
+			<form class="add-task-form" action="#">
+				<div class="box-top">
+					<h2>Group Description</h2>
+				</div>
+				<textarea class="textbox" placeholder="Enter group Description..." rows="4"></textarea>
+				<div class="box-bottom">
+					<div class="inline-buttons-container">
+						<button class="button button--cancel-task">CANCEL</button>
+						<button type="submit" value="Submit" class="button button--save-task">SAVE</button>
+					</div>
+				</div>			
+		
+			</form>	
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="box-container">
+			<form class="add-task-form" action="#">
+				<div class="box-top">
+					<h2 id = "exitGroup"><a href="./main">EXIT</a></h2>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<button class="button create-group-button--index"><a href="./main.html">Create Group</a></button>
+	<!--
+	<div class="container">
+		<div class="box-container box-container--task">
+			<form class="add-task-form" action="#">
+				<div class="box-top">
+					<h2>Group Description</h2>
+				</div>
+				<textarea class="textbox textbox--area" placeholder="Enter task details..." rows="4"></textarea>
+				<h2 class="label label--date">Select Due Date:</h2>
+				<input class="input--date" type="date">
+				<div class="box-bottom">
+					<div class="inline-buttons-container">
+						<button class="button button--cancel-task">CANCEL</button>
+						<button type="submit" value="Submit" class="button button--save-task">SAVE</button>
+					</div>
+				</div>
+			</form>
+	</div>
+
 	<div class="container">
 		<div class="box-container-signup">
 			<div class="box-top">
@@ -37,7 +118,7 @@
 			</div>
 		</div>
 	</div>
-
+	-->
 </body>
 
 </html>
