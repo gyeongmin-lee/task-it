@@ -119,6 +119,7 @@ $(document).ready(function () {
 		}).catch(function(error) {
 			console.log("error");
 		});
+		alert("Name Saved!");
 		//window.location.href = "./main.html";
 	});
 
