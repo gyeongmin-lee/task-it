@@ -11,6 +11,7 @@
 <body>
   <div class="nav">
     <h1 class="title title--nav">Create Group</h1>
+    <img src="./image/close-button.png" alt="close button" width="21" height="21" class="close-button-img close-goback" />
   </div>
 
   <div class="menu-panel">
@@ -34,23 +35,21 @@
     <div class="box-container">
       <form class="add-task-form" action="#">
         <div class="box-top">
-          <h2>Group Description</h2>
+          <h2 class="title">Group Title</h2>
         </div>
         <input required="required" type="text" name="task-title" placeholder="Enter your group name" class="textbox textbox--task-title" />
-        <div class="inline-buttons-container">
-          <button class="button button--cancel-task">CANCEL</button>
-          <button type="submit" value="Submit" class="button button--save-task">SAVE</button>
+        <div class="box-bottom">
+          <div class="inline-buttons-container">
+            <button class="button button--cancel-task">CANCEL</button>
+            <button type="submit" value="Submit" class="button button--save-task">SAVE</button>
+          </div>
         </div>
     </div>
     </form>
-  </div>
-  </div>
-
-  <div class="container">
     <div class="box-container">
       <form class="add-task-form" action="#">
         <div class="box-top">
-          <h2>Group Description</h2>
+          <h2 class="title">Group Description</h2>
         </div>
         <textarea class="textbox" placeholder="Enter group Description..." rows="4"></textarea>
         <div class="box-bottom">
@@ -63,54 +62,18 @@
       </form>
     </div>
   </div>
+
+  <div class="container">
+
+  </div>
   </div>
 
   <button class="button create-group-button--index"><a href="./main.html">Create Group</a></button>
-  <!--
-	<div class="container">
-		<div class="box-container box-container--task">
-			<form class="add-task-form" action="#">
-				<div class="box-top">
-					<h2>Group Description</h2>
-				</div>
-				<textarea class="textbox textbox--area" placeholder="Enter task details..." rows="4"></textarea>
-				<h2 class="label label--date">Select Due Date:</h2>
-				<input class="input--date" type="date">
-				<div class="box-bottom">
-					<div class="inline-buttons-container">
-						<button class="button button--cancel-task">CANCEL</button>
-						<button type="submit" value="Submit" class="button button--save-task">SAVE</button>
-					</div>
-				</div>
-			</form>
-	</div>
 
-	<div class="container">
-		<div class="box-container-signup">
-			<div class="box-top">
-				<h2 class = "GroupHead">Group Name</h2>
-			</div>
-			<div class="box-container--group">
-				 <input type="text" name="searchGroup" placeholder="Enter Group Name" class="textbox textbox--signup"/>
-			</div>
-		</div>
-		<div class="box-container-signup">
-			<div class="box-top">
-				<h2 class = "GroupHead">Description</h2>
-			</div>
-			<div class="box-container--CreateGroup--Description">
-				 <input type="text" name="searchGroup" placeholder="Enter Description" class="textbox textbox--signup"/>
-				 <textarea rows="4" cols="50" name="comment" form="usrform">
-			     Enter text here...</textarea>
-			</div>
-		</div>
-		<div class="box-container-signup">
-			<div class="box-top">
-				<h2 class = "GroupHead">Create Group</h2>
-			</div>
-		</div>
-	</div>
-	-->
+  <!-- JQUERY IMPORT-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="./js/universal.js"></script>
 </body>
 
 </html>
