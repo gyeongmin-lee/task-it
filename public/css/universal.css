@@ -587,7 +587,8 @@ button.dropdown {
 }
 
 .box-top-title--preference {
-	font-size: 17pt;
+    font-size: 17pt;
+    display: inline;
 }
 
 .content--preference{
