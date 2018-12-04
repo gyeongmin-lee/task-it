@@ -5,6 +5,7 @@ function signIn() {
 
 }
 
+// Redirect to main page after login
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
         window.location = 'main.html';

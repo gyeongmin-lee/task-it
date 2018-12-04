@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // Initially loads tasks and wait for event in the database
     function loadMessages() {
         var callback = function (snap) {
             var data = snap.val();
@@ -15,6 +16,7 @@ $(document).ready(function () {
         taskRef.on('child_changed', callback);
     }
 
+    // Display firebase data as html div
     function displayTask(key, title, detail, duedate, donePeople, inProgressPeople) {
         $(TASK_TEMPLATE).appendTo(".container--task").attr("id", key);
         var task = $("#" + key);
@@ -39,6 +41,7 @@ $(document).ready(function () {
         toggleList();
     }
 
+    // When user submits a new task
     function onTaskFormSubmit(e) {
         e.preventDefault();
         title = $(".textbox--task-title").val();
@@ -48,6 +51,7 @@ $(document).ready(function () {
         $("#edit-add-task").remove();
     }
 
+    // Sends user input task data to firebase
     function taskPost(taskTitle, taskDetail, taskDue) {
         if (taskDue != null && taskDue != "") {
             var date = new Date(due);
@@ -56,6 +60,7 @@ $(document).ready(function () {
             taskDue = month + ' ' + (date.getDate() + 1) + ', ' + date.getFullYear();
         }
 
+        //TODO the key to be used later
         var newPostKey = firebase.database().ref('/tasks/').push({
             detail: taskDetail || null,
             title: taskTitle || null,
@@ -91,7 +96,7 @@ $(document).ready(function () {
         '</div>' +
         '</div>';
 
-
+    // Toggles list of people
     function toggleList() {
         var toggleDuration = 100;
 
@@ -128,6 +133,7 @@ $(document).ready(function () {
         })
     }
 
+    // Adding a user query menu when clicked "Create Task"
     function addTaskMenu() {
         $(".button--add-task").on("click", function (e) {
             var container = $(".container--task");
@@ -153,7 +159,7 @@ $(document).ready(function () {
         });
     }
 
-
+    // Deletes task query screen when Cancel button is clicked
     function closeTaskMenu() {
         $(".button--cancel-task").off();
 
@@ -163,6 +169,7 @@ $(document).ready(function () {
         })
     }
 
+    // When Submit button is clicked
     function saveTask() {
         $(".button--save-task").off();
         $(document).on('submit', ".add-task-form", onTaskFormSubmit);

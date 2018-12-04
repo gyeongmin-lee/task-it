@@ -1,3 +1,4 @@
+// Hides group when hide button is clicked
 $(document).ready(function () {
 	$("#exit--setB").on("click", function(e) {
 		$("#setB").hide();

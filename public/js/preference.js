@@ -39,6 +39,7 @@ if (user) {
 initFirebaseAuth();
 
 $(document).ready(function () {
+	// Changing theme settings
 	$("input[type=radio][name=theme]").change(function () {
 		if (this.id == "light_theme") {
 			$("html").addClass("light");
@@ -56,7 +57,7 @@ $(document).ready(function () {
 		}
 	});
 	
-	 var changename = function () {
+	var changename = function () {
         var $input = $("<input>", {
             val: $(userNameElement).text(),
             type: "text"
@@ -107,7 +108,7 @@ $(document).ready(function () {
     $("#edit-username--preference").on("click", changename);
     $("#edit-email--preference").on("click", changeemail);
 	
-	
+	// Update the firebase data with user-input data
 	$("#savebutton").on("click", function() {
 		var user = firebase.auth().currentUser;
 		user.updateProfile({

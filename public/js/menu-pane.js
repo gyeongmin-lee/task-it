@@ -27,6 +27,7 @@ $(document).ready(function () {
         }
     });
 
+    // Toggles menu pane
     function toggleMenu(event) {
         menuPanel.animate({ width: 'toggle' }, animationSpeed);
     }
