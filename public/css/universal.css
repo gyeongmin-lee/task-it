@@ -482,6 +482,27 @@ button.dropdown {
     border-radius: 5px;
 }
 
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--sub2-bg-color); 
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--sub2-bg-color); 
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: var(--sub1-bg-color); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 /** Landing Page **/
 .title--landing-page{
 	font-size: 40pt;
