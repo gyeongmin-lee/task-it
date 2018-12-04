@@ -11,9 +11,14 @@ $(document).ready(function () {
 
             displayTask(snap.key, title, detail, duedate, donePeople, inprogressPeople);
         };
+
+        var callbackDelete = function (snap) {
+            hideTask(snap.key);
+        }
         var taskRef = firebase.database().ref('/tasks/');
         taskRef.on('child_added', callback);
         taskRef.on('child_changed', callback);
+        taskRef.on('child_removed', callbackDelete);
     }
 
     // Display firebase data as html div
@@ -39,6 +44,18 @@ $(document).ready(function () {
         task.find('.in-progress-people').text(inprogressCount + " ");
         toggleTaskState();
         toggleList();
+        deleteTask();
+    }
+
+    function hideTask (key) {
+        var task = $(".container").find($('#' + key));
+        task.hide();
+    }
+
+    // Deletes a task from the firebase database
+    function deleteTaskData(key) {
+        var taskRef = firebase.database().ref('/tasks/');
+        taskRef.child(key).remove();
     }
 
     // When user submits a new task
@@ -71,6 +88,7 @@ $(document).ready(function () {
     var TASK_TEMPLATE =
         '<div class="box-container box-container--task">' +
         '<div class="checkbox checkbox-not-checked"></div>' +
+        '<img class="task-delete" src="./image/trash.png">' +
         '<div class="task-left-side">' +
         '<h1 class="title title--task"></h1>' +
         '<p class="content content--task"></p>' +
@@ -154,6 +172,7 @@ $(document).ready(function () {
                 header.append(form);
                 container.append(header);
             }
+
             closeTaskMenu();
             saveTask();
         });
@@ -175,12 +194,21 @@ $(document).ready(function () {
         $(document).on('submit', ".add-task-form", onTaskFormSubmit);
     }
 
-	
+	function deleteTask() {
+        $(".task-delete").off();
+
+        $(".task-delete").on("click", function (e) {
+            e.preventDefault();
+            var key = $(this).parent().attr('id');
+            deleteTaskData(key);
+        });       
+    }
 
 
     loadMessages();
 
     addTaskMenu();
-    closeTaskMenu();
+    //closeTaskMenu();
+    //deleteTask();
 });
 
