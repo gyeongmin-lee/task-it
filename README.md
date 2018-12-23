@@ -1,4 +1,6 @@
-# Untitled Task List Project
+# Task It
+
+[Go to app](https://task-list-project.firebaseapp.com)
 
 Task list app which supports collaboration between classmates.
 
